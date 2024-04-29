@@ -1,0 +1,88 @@
+<!-- # Eres parte de un equipo de desarrollo, su tarea es crear una aplicación web que permita a los clientes hacer reservas en un restaurante de manera fácil y eficiente.
+# El sistema debe manejar la disponibilidad de mesas, permitiendo a los usuarios seleccionar fechas y horarios.
+
+# Requisitos Específicos:
+# - Desarrollar la lógica para controlar la disponibilidad de mesas basada en la capacidad del restaurante y las reservas existentes.
+# - Implementar un sistema de gestión de reservas que permita crear, visualizar, modificar y cancelar reservas.
+# - Diseñar una página principal donde los clientes puedan seleccionar la fecha y hora de su reserva, así como el número de personas.
+# - Implementa formularios para la entrada de datos.
+
+# Tecnologías a utilizar:
+# - Python - Flask
+# - Tailwind CSS
+# - Base de datos a elección -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <!-- <link href="./output.css" rel="stylesheet">  link a archivo css tailwind que no llego
+    a compilar bien-->
+    <link href="/static/style.css" rel="stylesheet">
+    <style>
+
+        
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh;
+            margin: 0px;
+            padding: 20px;
+            background-color: #f0f0f0;
+}
+        .menu {
+            text-align: center; 
+            max-width: 600px; 
+            padding: 20px;
+            margin: 40px;
+    
+        
+    
+        }
+    </style>
+
+</head>
+<body>
+    <header class="menu">
+        <nav>
+            <a href="./index.html"><img src="/static/pngwing.com.png" alt="Logo de tu sitio" ></a>
+            <ul>
+                
+                    <li><a href="./index.html">Reservas</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a> </li>
+                    <li><a href="./registro.html">Registrarse</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+              
+            </ul>
+        </nav>
+    </header>
+
+    
+
+    <div>
+        <h2>Reserva de Mesas</h2>
+        <div>
+            <label for="numero_mesa">Número de Mesa:</label>
+            <input type="text" id="numero_mesa">
+        </div>
+
+        <div>
+            <label for="nombre_cliente">Nombre del Cliente:</label>
+            <input type="text" id="nombre_cliente">
+
+        </div>
+
+        <div>
+            <label for="fecha_reserva">Fecha de Reserva:</label>
+            <input type="date" id="fecha_reserva">
+        </div>
+        
+        
+        <button onclick="reservarMesa()">Reservar Mesa</button>
+    </div>
+    
+</body>
+</html>
